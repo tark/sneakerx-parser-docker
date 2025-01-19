@@ -47,4 +47,4 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Set up the virtual display (Xvfb)
-CMD Xvfb :99 -screen 0 1280x1024x24 & sleep 10 && DISPLAY=:99 node build/src/index.js --url "https://www.asics.com/nl/en-nl/novablast-5/p/1011B974-100.html" --log-id="ec3aced9-6301-4399-aa37-37ff4e9d1e10"
+CMD Xvfb :99 -screen 0 1280x1024x24 & sleep 10 && DISPLAY=:99 node build/src/index.js
