@@ -96,12 +96,11 @@ const log = (message: string, object?: any) => {
 const main = async () => {
   try {
     log(`main`)
-    log(`main - getting args...`)
-    const args = await getArgs()
-    logId = args.logId
-    const url = args.url
-    log(`main - logId: `, logId)
+
+    const url = process.env.URL ?? ''
+    logId = process.env.LOG_ID ?? ''
     log(`main - url:   `, url)
+    log(`main - logId: `, logId)
 
     log(`main - getting product...`)
     const product = await getProductFromPage(url)
